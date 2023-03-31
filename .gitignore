@@ -1,0 +1,10 @@
+db.sqlite3
+secret.py
+/venv
+.DS_Store
+*.log
+*.pot
+*.pyc
+__pycache__/
+.idea
+media
