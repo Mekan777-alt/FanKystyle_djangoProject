@@ -30,3 +30,11 @@ class LastTrack(models.Model):
     class Meta:
         verbose_name = 'Последние трэки'
         verbose_name_plural = 'Последние трэки'
+
+
+class Galery(models.Model):
+    photo = models.ImageField(upload_to='galery_image', null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'Галерея фотографий'
+        verbose_name_plural = 'Галерея фотографий'
