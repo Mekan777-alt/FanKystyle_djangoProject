@@ -87,125 +87,27 @@
     <!-- music_area  -->
     <div class="music_area music_gallery inc_padding">
         <div class="container">
-            <div class="row align-items-center justify-content-center mb-20">
-                <div class="col-xl-10">
-                    <div class="row align-items-center">
-                        <div class="col-xl-9 col-md-9">
-                            <div class="music_field">
-                                <div class="audio_name">
-                                    <div class="name">
-                                        <h4>Frando Kally</h4>
-                                        <p>10 November, 2019</p>
+            {% for track in Tracks %}
+                <div class="row align-items-center justify-content-center mb-20">
+                    <div class="col-xl-10">
+                        <div class="row align-items-center">
+                            <div class="col-xl-9 col-md-9">
+                                <div class="music_field">
+                                    <div class="audio_name">
+                                        <div class="name">
+                                            <h4>{{ track.name }}</h4>
+                                            <p>{{ track.date }}</p>
+                                        </div>
+                                        <audio preload="auto" controls>
+                                            <source src="{{ track.track }}">
+                                        </audio>
                                     </div>
-                                    <audio preload="auto" controls>
-                                        <source src="https://www.w3schools.com/html/horse.mp3">
-                                    </audio>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-            </div>
-            <div class="row align-items-center justify-content-center mb-20">
-                <div class="col-xl-10">
-                    <div class="row align-items-center">
-                        <div class="col-xl-9 col-md-9">
-                            <div class="music_field">
-                                <div class="audio_name">
-                                    <div class="name">
-                                        <h4>Frando Kally</h4>
-                                        <p>10 November, 2019</p>
-                                    </div>
-                                    <audio preload="auto" controls>
-                                        <source src="https://www.w3schools.com/html/horse.mp3">
-                                    </audio>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="row align-items-center justify-content-center mb-20">
-                <div class="col-xl-10">
-                    <div class="row align-items-center">
-                        <div class="col-xl-9 col-md-9">
-                            <div class="music_field">
-                                <div class="audio_name">
-                                    <div class="name">
-                                        <h4>Frando Kally</h4>
-                                        <p>10 November, 2019</p>
-                                    </div>
-                                    <audio preload="auto" controls>
-                                        <source src="https://www.w3schools.com/html/horse.mp3">
-                                    </audio>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="row align-items-center justify-content-center mb-20">
-                <div class="col-xl-10">
-                    <div class="row align-items-center">
-                        <div class="col-xl-9 col-md-9">
-                            <div class="music_field">
-                                <div class="audio_name">
-                                    <div class="name">
-                                        <h4>Frando Kally</h4>
-                                        <p>10 November, 2019</p>
-                                    </div>
-                                    <audio preload="auto" controls>
-                                        <source src="https://www.w3schools.com/html/horse.mp3">
-                                    </audio>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="row align-items-center justify-content-center mb-20">
-                <div class="col-xl-10">
-                    <div class="row align-items-center">
-                        <div class="col-xl-9 col-md-9">
-                            <div class="music_field">
-                                <div class="audio_name">
-                                    <div class="name">
-                                        <h4>Frando Kally</h4>
-                                        <p>10 November, 2019</p>
-                                    </div>
-                                    <audio preload="auto" controls>
-                                        <source src="https://www.w3schools.com/html/horse.mp3">
-                                    </audio>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="row align-items-center justify-content-center mb-20">
-                <div class="col-xl-10">
-                    <div class="row align-items-center">
-                        <div class="col-xl-9 col-md-9">
-                            <div class="music_field">
-                                <div class="audio_name">
-                                    <div class="name">
-                                        <h4>Frando Kally</h4>
-                                        <p>10 November, 2019</p>
-                                    </div>
-                                    <audio preload="auto" controls>
-                                        <source src="https://www.w3schools.com/html/horse.mp3">
-                                    </audio>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
     <!-- music_area end  -->

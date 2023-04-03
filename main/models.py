@@ -10,6 +10,9 @@ class Bio(models.Model):
         verbose_name = 'Биография'
         verbose_name_plural = 'Биография'
 
+    def __str__(self):
+        return 'Биография главной страницы'
+
 
 class Video(models.Model):
     name = models.CharField(max_length=256)
@@ -21,6 +24,9 @@ class Video(models.Model):
         verbose_name = 'Видео главной страницы'
         verbose_name_plural = 'Видео главной страницы'
 
+    def __str__(self):
+        return f'{self.name} - {self.video}'
+
 
 class LastTrack(models.Model):
     name = models.CharField(max_length=256)
@@ -31,10 +37,21 @@ class LastTrack(models.Model):
         verbose_name = 'Последние трэки'
         verbose_name_plural = 'Последние трэки'
 
+    def __str__(self):
+        return f'{self.name} - {self.track}'
+
 
 class Galery(models.Model):
-    photo = models.ImageField(upload_to='galery_image', null=True, blank=True)
+    photo_5_5 = models.ImageField(upload_to='galery_image', null=True, blank=True)
+    photo_7_7 = models.ImageField(upload_to='galery_image', null=True, blank=True)
+    photo_4_6 = models.ImageField(upload_to='galery_image', null=True, blank=True)
+    photo_4_6_2 = models.ImageField(upload_to='galery_image', null=True, blank=True)
+    photo_4_6_3 = models.ImageField(upload_to='galery_image', null=True, blank=True)
 
     class Meta:
         verbose_name = 'Галерея фотографий'
         verbose_name_plural = 'Галерея фотографий'
+
+
+    def __str__(self):
+        return 'Галерея фотографий главной страницы'

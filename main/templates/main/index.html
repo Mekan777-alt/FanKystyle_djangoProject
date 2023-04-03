@@ -140,8 +140,8 @@
                                             <h4>{{ tracks.name }}</h4>
                                             <p>{{ tracks.date }}</p>
                                         </div>
-                                        <audio preload="auto" controls>
-                                            <source src="{{ tracks.track }}">
+                                        <audio preload="none" controls="controls">
+                                            <source src="{{ tracks.track.url }}">
                                         </audio>
                                     </div>
                                 </div>
@@ -164,68 +164,70 @@
                     </div>
                 </div>
             </div>
-            <div class="row grid">
-                <div class="col-xl-5 col-lg-5 grid-item cat1 col-md-6">
-                    <div class="single-gallery mb-30">
-                        <div class="portfolio-img">
-                            <img src="{% static 'img/gallery/1.jpeg' %}" alt="">
-                        </div>
-                        <div class="gallery_hover">
-                            <a class="popup-image" href="{% static 'img/gallery/1.jpeg' %}" class="hover_inner">
-                                <i class="ti-plus"></i>
-                            </a>
+            {% for galery in Galery %}
+                <div class="row grid">
+                    <div class="col-xl-5 col-lg-5 grid-item cat1 col-md-6">
+                        <div class="single-gallery mb-30">
+                            <div class="portfolio-img">
+                                <img src="{{ galery.photo_5_5.url }}" alt="">
+                            </div>
+                            <div class="gallery_hover">
+                                <a class="popup-image" href="{{ galery.photo_5_5.url }}" class="hover_inner">
+                                    <i class="ti-plus"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
                     <div class="col-xl-7 col-lg-7 grid-item cat3 cat4 col-md-6">
                         <div class="single-gallery mb-30">
-                                <div class="portfolio-img">
-                                        <img src="{% static 'img/gallery/2.jpeg' %}" alt="">
-                                </div>
-                                <div class="gallery_hover">
-                                        <a class="popup-image" href="{% static 'img/gallery/2.jpeg' %}" class="hover_inner">
-                                            <i class="ti-plus"></i>
-                                        </a>
-                                </div>
+                            <div class="portfolio-img">
+                                <img src="{{ galery.photo_7_7.url }}" alt="">
+                            </div>
+                            <div class="gallery_hover">
+                                <a class="popup-image" href="{{ galery.photo_7_7.url }}" class="hover_inner">
+                                    <i class="ti-plus"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-6 grid-item cat4 col-md-6">
                         <div class="single-gallery mb-30">
-                                <div class="portfolio-img">
-                                        <img src="{% static 'img/gallery/3.jpeg' %}" alt="">
-                                </div>
-                                <div class="gallery_hover">
-                                        <a class="popup-image" href="{% static 'img/gallery/3.jpeg' %}" class="hover_inner">
-                                            <i class="ti-plus"></i>
-                                        </a>
-                                </div>
+                            <div class="portfolio-img">
+                                <img src="{{ galery.photo_4_6.url }}" alt="">
+                            </div>
+                            <div class="gallery_hover">
+                                <a class="popup-image" href="{{ galery.photo_4_6.url }}" class="hover_inner">
+                                    <i class="ti-plus"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-6 grid-item cat2 col-md-6">
                         <div class="single-gallery mb-30">
                             <div class="portfolio-img">
-                                    <img src="{% static 'img/gallery/4.jpeg' %}" alt="">
+                                <img src="{{ galery.photo_4_6_2.url }}" alt="">
                             </div>
                             <div class="gallery_hover">
-                                    <a class="popup-image" href="{% static 'img/gallery/4.jpeg' %}" class="hover_inner">
-                                        <i class="ti-plus"></i>
-                                    </a>
-                                </div>
+                                <a class="popup-image" href="{{ galery.photo_4_6_2.url }}" class="hover_inner">
+                                    <i class="ti-plus"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-6 grid-item cat2 col-md-6">
                         <div class="single-gallery mb-30">
                             <div class="portfolio-img">
-                                    <img src="{% static 'img/gallery/5.jpeg' %}" alt="">
+                                <img src="{{ galery.photo_4_6_3.url }}" alt="">
                             </div>
                             <div class="gallery_hover">
-                                    <a class="popup-image" href="{% static 'img/gallery/5.jpeg' %}" class="hover_inner">
-                                        <i class="ti-plus"></i>
-                                    </a>
+                                <a class="popup-image" href="{{ galery.photo_4_6_3.url }}" class="hover_inner">
+                                    <i class="ti-plus"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
+            {% endfor %}
         </div>
     </div>
     <!--/ gallery -->
