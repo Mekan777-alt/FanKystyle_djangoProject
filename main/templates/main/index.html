@@ -27,6 +27,13 @@
     <link rel="stylesheet" href="{% static 'css/slick.css' %}">
     <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/new_header' %}">
+    <style>
+		video {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
@@ -45,10 +52,10 @@
                             <div class="col-xl-3 col-lg-2">
                             </div>
                             <div class="col-xl-6 col-lg-7">
-                                <div class="main-menu  d-none d-lg-block">
+                                <div class="main-menu d-none d-lg-block">
                                     <nav>
-                                        <ul id="navigation">
-                                            <li><a class="active" href="{% url 'main_app:index' %}">Home</a></li>
+                                        <ul>
+                                            <li><a href="{% url 'main_app:index' %}">Home</a></li>
                                             <li><a href="{% url 'track_app:track' %}">Tracks</a></li>
                                             <li><a href="{% url 'contact_app:contact' %}">Contact</a></li>
                                         </ul>
@@ -65,6 +72,18 @@
         </div>
     </header>
     <!-- header-end -->
+
+    <div class="bradcam_area breadcam_bg_2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>Home</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- about_area  -->
@@ -89,35 +108,6 @@
     {% endfor %}
     <!--/ about_area  -->
 
-    <!-- youtube_video_area  -->
-    {% for video in Video %}
-        <div class="youtube_video_area">
-            <div class="container-fluid p-0">
-                <div class="row no-gutters">
-                    <div class="col-xl-3 col-lg-3 col-md-6">
-                        <div class="single_video">
-                            <div class="thumb">
-                                <img src="{{ video.image }}" alt="">
-                            </div>
-                            <div class="hover_elements">
-                                <div class="video">
-                                    <a class="popup-video" href="#">
-                                        <i class="fa fa-play"></i>
-                                    </a>
-                                </div>
-
-                                <div class="hover_inner">
-                                    <span>{{ video.name }}</span>
-                                    <h3><a href="#">{{ video.description }}</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    {% endfor %}
-    <!-- / youtube_video_area  -->
 
     <!-- music_area  -->
     <div class="music_area music_gallery">
@@ -231,6 +221,78 @@
         </div>
     </div>
     <!--/ gallery -->
+    <!-- youtube_video_area  -->
+    <div class="youtube_video_area">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    {% for video in Video %}
+                        <div class="hover_elements">
+                            <div class="video">
+                                <video controls id="video-player" width="500" height="500" >
+                                    <source src="{{ video.video.url }}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="hover_inner">
+                                <span>{{ video.name }}</span>
+                                <h3><video href="#">{{ video.description }}</video></h3>
+                            </div>
+                        </div>
+                        <div class="hover_elements">
+                            <div class="video">
+                                <video controls id="video-player" width="500" height="500" >
+                                    <source src="{{ video.video.url }}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="hover_inner">
+                                <span>{{ video.name }}</span>
+                                <h3><video href="#">{{ video.description }}</video></h3>
+                            </div>
+                        </div>
+                        <div class="hover_elements">
+                            <div class="video">
+                                <video controls id="video-player" width="500" height="500" >
+                                    <source src="{{ video.video.url }}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="hover_inner">
+                                <span>{{ video.name }}</span>
+                                <h3><video href="#">{{ video.description }}</video></h3>
+                            </div>
+                        </div>
+                        <div class="hover_elements">
+                            <div class="video">
+                                <video controls id="video-player" width="500" height="500" >
+                                    <source src="{{ video.video.url }}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="hover_inner">
+                                <span>{{ video.name }}</span>
+                                <h3><video href="#">{{ video.description }}</video></h3>
+                            </div>
+                        </div>
+                        <div class="hover_elements">
+                            <div class="video">
+                                <video controls id="video-player" width="500" height="500" >
+                                    <source src="{{ video.video.url }}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="hover_inner">
+                                <span>{{ video.name }}</span>
+                                <h3><video href="#">{{ video.description }}</video></h3>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / youtube_video_area  -->
 
     <!-- contact_rsvp -->
     <div class="contact_rsvp">
@@ -281,23 +343,23 @@
                             <div class="socail_links">
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="https://youtube.com/@DJFANKYSTYLE">
                                             <i class="fa fa-youtube-play"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="https://instagram.com/djfankystyle">
                                             <i class="fa fa-instagram"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="https://t.me/djfankystyle">
                                             <i class="fa fa-telegram"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
-                                            <i class="fa fa-whatsapp"></i>
+                                        <a href="https://vk.com/djfankystyle">
+                                            <i class="fa fa-vk"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -365,6 +427,13 @@
     <script src="{% static 'js/mail-script.js' %}"></script>
 
     <script src="{% static 'js/main.js' %}"></script>
+
+    <script>
+		var video = document.getElementById('video-player');
+		video.addEventListener('click', function() {
+			video.requestFullscreen();
+		});
+	</script>
     
 		<script>
                 $(function() {

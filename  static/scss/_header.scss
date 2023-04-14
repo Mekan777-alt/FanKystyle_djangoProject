@@ -169,8 +169,8 @@
                         padding: 0px 0px 0px 0px;
                         font-family: $font1;
                         position: relative;
-                        text-transform:capitalize;
-                        
+                        text-transform: capitalize;
+
                         @media #{$mid_device} {
                             // padding: 41px 0px 10px 0px;
                             font-size: 15px;
@@ -314,7 +314,7 @@
     //             color: #ED1B1B;
     //         }
     //       }
-    //   }  
+    //   }
     //   .short_contact_list{
     //       text-align: right;
     //       @media #{$mobile_device} {
@@ -326,8 +326,8 @@
     //               a{
     //                 font-size: 13px;
     //                 color: #fff;
-    //                 margin-left: 50px; 
-    //                 @media #{$mobile_device} 
+    //                 margin-left: 50px;
+    //                 @media #{$mobile_device}
     //                 {
     //                     margin-left: 0;
     //                     margin: 0 5px;

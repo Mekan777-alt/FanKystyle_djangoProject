@@ -4,7 +4,7 @@ from .forms import ContactForm
 
 def contact(request):
     context = {
-        'title': 'Contact',
+        'title': 'Contact | DJ Fankystyle',
         'form': ContactForm()
     }
     return render(request, 'contact/contact.html', context)

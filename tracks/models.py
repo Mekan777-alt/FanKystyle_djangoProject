@@ -14,12 +14,11 @@ class Tracks(models.Model):
 
 class Video(models.Model):
     name = models.CharField(max_length=256)
-    image = models.ImageField(upload_to='video_image', null=True, blank=True)
     description = models.CharField(max_length=256)
-    video = models.FileField(upload_to='videos')
+    url = models.CharField(max_length=256)
 
     class Meta:
-        verbose_name = 'Видео'
-        verbose_name_plural = 'Видео'
+        verbose_name = 'Видео / Шорты'
+        verbose_name_plural = 'Видео / Шорты'
 
 

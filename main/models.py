@@ -16,9 +16,20 @@ class Bio(models.Model):
 
 class Video(models.Model):
     name = models.CharField(max_length=256)
-    image = models.ImageField(upload_to='video_image', null=True, blank=True)
-    description = models.TextField()
+    description = models.TextField(null=True)
     video = models.FileField(upload_to='video', null=True, blank=True)
+    name1 = models.CharField(max_length=256, default='now')
+    description1 = models.TextField(null=True)
+    video1 = models.FileField(upload_to='video', null=True, blank=True)
+    name2 = models.CharField(max_length=256, default='now')
+    description2 = models.TextField(null=True)
+    video2 = models.FileField(upload_to='video', null=True, blank=True)
+    name3 = models.CharField(max_length=256, default='now')
+    description3 = models.TextField(null=True)
+    video3 = models.FileField(upload_to='video', null=True, blank=True)
+    name4 = models.CharField(max_length=256, default='now')
+    description4 = models.TextField(null=True)
+    video4 = models.FileField(upload_to='video', null=True, blank=True)
 
     class Meta:
         verbose_name = 'Видео главной страницы'
@@ -51,7 +62,6 @@ class Galery(models.Model):
     class Meta:
         verbose_name = 'Галерея фотографий'
         verbose_name_plural = 'Галерея фотографий'
-
 
     def __str__(self):
         return 'Галерея фотографий главной страницы'
