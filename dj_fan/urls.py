@@ -22,7 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls', namespace='index')),
     path('', include('tracks.urls', namespace='tracks')),
-    path('', include('contact.urls', namespace='contact')),
 ]
 
 if settings.DEBUG:

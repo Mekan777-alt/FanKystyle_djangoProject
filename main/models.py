@@ -40,3 +40,15 @@ class Galery(models.Model):
 
     def __str__(self):
         return 'Галерея фотографий главной страницы'
+
+
+class Video(models.Model):
+    name = models.CharField(max_length=256, default='0')
+    video = models.FileField(upload_to='video_main', null=True)
+
+    class Meta:
+        verbose_name = 'Видео главной страницы'
+        verbose_name_plural = 'Видео главной страницы'
+
+    def __str__(self):
+        return f'{self.name}'

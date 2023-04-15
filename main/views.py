@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Bio, LastTrack, Galery
+from .models import Bio, LastTrack, Galery, Video
 
 
 def index(request):
@@ -8,6 +8,7 @@ def index(request):
         'title': 'Home | DJ Fankystyle',
         'Bio': Bio.objects.all(),
         'LastTrack': LastTrack.objects.all(),
-        'Galery': galery
+        'Galery': galery,
+        'Video': Video.objects.all()
     }
     return render(request, 'main/index.html', context)

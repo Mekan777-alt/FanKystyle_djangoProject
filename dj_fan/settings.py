@@ -41,7 +41,6 @@ INSTALLED_APPS = [
 
     'main.apps.MainConfig',
     'tracks.apps.TracksConfig',
-    'contact.apps.ContactConfig',
 ]
 
 MIDDLEWARE = [
