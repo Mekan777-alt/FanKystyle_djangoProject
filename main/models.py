@@ -14,31 +14,6 @@ class Bio(models.Model):
         return 'Биография главной страницы'
 
 
-class Video(models.Model):
-    name = models.CharField(max_length=256)
-    description = models.TextField(null=True)
-    video = models.FileField(upload_to='video', null=True, blank=True)
-    name1 = models.CharField(max_length=256, default='now')
-    description1 = models.TextField(null=True)
-    video1 = models.FileField(upload_to='video', null=True, blank=True)
-    name2 = models.CharField(max_length=256, default='now')
-    description2 = models.TextField(null=True)
-    video2 = models.FileField(upload_to='video', null=True, blank=True)
-    name3 = models.CharField(max_length=256, default='now')
-    description3 = models.TextField(null=True)
-    video3 = models.FileField(upload_to='video', null=True, blank=True)
-    name4 = models.CharField(max_length=256, default='now')
-    description4 = models.TextField(null=True)
-    video4 = models.FileField(upload_to='video', null=True, blank=True)
-
-    class Meta:
-        verbose_name = 'Видео главной страницы'
-        verbose_name_plural = 'Видео главной страницы'
-
-    def __str__(self):
-        return f'{self.name} - {self.video}'
-
-
 class LastTrack(models.Model):
     name = models.CharField(max_length=256)
     date = models.DateField(default=timezone.now)

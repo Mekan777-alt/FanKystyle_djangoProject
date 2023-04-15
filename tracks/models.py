@@ -15,7 +15,7 @@ class Tracks(models.Model):
 class Video(models.Model):
     name = models.CharField(max_length=256)
     description = models.CharField(max_length=256)
-    url = models.CharField(max_length=256)
+    video  = models.FileField(upload_to='video', null=True, blank=True)
 
     class Meta:
         verbose_name = 'Видео / Шорты'

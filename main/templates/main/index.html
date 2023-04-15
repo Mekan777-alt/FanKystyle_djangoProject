@@ -34,6 +34,19 @@
 			height: 100%;
 		}
 	</style>
+    <style>
+        .video-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        video1 {
+            width: 30%;
+            margin: 0 10px;
+        }
+    </style>
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
@@ -56,7 +69,7 @@
                                     <nav>
                                         <ul>
                                             <li><a href="{% url 'main_app:index' %}">Home</a></li>
-                                            <li><a href="{% url 'track_app:track' %}">Tracks</a></li>
+                                            <li><a href="{% url 'track_app:track' %}">Tracks | Videos</a></li>
                                             <li><a href="{% url 'contact_app:contact' %}">Contact</a></li>
                                         </ul>
                                     </nav>
@@ -221,78 +234,6 @@
         </div>
     </div>
     <!--/ gallery -->
-    <!-- youtube_video_area  -->
-    <div class="youtube_video_area">
-        <div class="container-fluid p-0">
-            <div class="row no-gutters">
-                <div class="col-xl-3 col-lg-3 col-md-6">
-                    {% for video in Video %}
-                        <div class="hover_elements">
-                            <div class="video">
-                                <video controls id="video-player" width="500" height="500" >
-                                    <source src="{{ video.video.url }}" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            <div class="hover_inner">
-                                <span>{{ video.name }}</span>
-                                <h3><video href="#">{{ video.description }}</video></h3>
-                            </div>
-                        </div>
-                        <div class="hover_elements">
-                            <div class="video">
-                                <video controls id="video-player" width="500" height="500" >
-                                    <source src="{{ video.video.url }}" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            <div class="hover_inner">
-                                <span>{{ video.name }}</span>
-                                <h3><video href="#">{{ video.description }}</video></h3>
-                            </div>
-                        </div>
-                        <div class="hover_elements">
-                            <div class="video">
-                                <video controls id="video-player" width="500" height="500" >
-                                    <source src="{{ video.video.url }}" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            <div class="hover_inner">
-                                <span>{{ video.name }}</span>
-                                <h3><video href="#">{{ video.description }}</video></h3>
-                            </div>
-                        </div>
-                        <div class="hover_elements">
-                            <div class="video">
-                                <video controls id="video-player" width="500" height="500" >
-                                    <source src="{{ video.video.url }}" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            <div class="hover_inner">
-                                <span>{{ video.name }}</span>
-                                <h3><video href="#">{{ video.description }}</video></h3>
-                            </div>
-                        </div>
-                        <div class="hover_elements">
-                            <div class="video">
-                                <video controls id="video-player" width="500" height="500" >
-                                    <source src="{{ video.video.url }}" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            <div class="hover_inner">
-                                <span>{{ video.name }}</span>
-                                <h3><video href="#">{{ video.description }}</video></h3>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- / youtube_video_area  -->
 
     <!-- contact_rsvp -->
     <div class="contact_rsvp">
