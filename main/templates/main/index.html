@@ -51,12 +51,17 @@
                     <div class="header_bottom_border">
                         <div class="row align-items-center">
                             <div class="col-xl-3 col-lg-2">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img src="../../../fk.png" alt="">
+                                    </a>
+                                </div>
                             </div>
                             <div class="col-xl-6 col-lg-7">
                                 <div class="main-menu d-none d-lg-block">
                                     <nav>
-                                        <ul>
-                                            <li><a href="{% url 'main_app:index' %}">Home</a></li>
+                                        <ul id="navigation">
+                                            <li><a class="active" href="{% url 'main_app:index' %}">Home</a></li>
                                             <li><a href="{% url 'track_app:track' %}">Tracks | Videos</a></li>
                                         </ul>
                                     </nav>
@@ -101,22 +106,20 @@
     <!--/ about_area  -->
 
     <!-- youtube_video_area  -->
-    {% for video in Video %}
-        <div class="youtube_video_area">
-            <div class="container-fluid p-0">
-                <div class="row no-gutters">
-                    <div class="hover_elements">
-                        <div class="video">
-                            <video controls id="video-player" width="500" height="500" >
-                                <source src="{{ video.video.url }}" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
+    <div class="youtube_video_area">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                <div class="hover_elements">
+                    <div class="video">
+                        <video controls id="video-player" width="500" height="500" >
+                            <source src="../../../media/main_video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
             </div>
         </div>
-    {% endfor %}
+    </div>
 
     <!-- music_area  -->
     <div class="music_area music_gallery">

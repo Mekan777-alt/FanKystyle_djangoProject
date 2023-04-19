@@ -3134,7 +3134,7 @@ h3 {
 
 /* line 1, ../../Arafath/CL/Cl November/221. Music/HTML/scss/_bradcam.scss */
 .bradcam_bg_1 {
-  background-image: url(../img/header.jpg);
+  background: #001D38;
   height: 60px;
 }
 
